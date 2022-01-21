@@ -1,4 +1,4 @@
-name: Automatic Revert
+name: Automatic
 
 on: 
   release:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   revert-commit:
-
+    name: Automatic
     runs-on: ubuntu-latest
 
     if: contains(github.event.comment.body, '/revert')
@@ -14,7 +14,7 @@ jobs:
     steps:
       - name: Checkout latest code
         uses: actions/checkout@v2
-      - name: Automatic Revert
+      - name: Automatic
         uses: srt32/revert@v0.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
