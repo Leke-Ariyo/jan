@@ -14,8 +14,8 @@ git remote set-url origin https://x-access-token:$GITHUB_TOKEN@github.com/$REPO_
 git config --global user.email "revert@github.com"
 git config --global user.name "GitHub Revert Action"
 
-set -o xtrace
+#set -o xtrace
 
-git fetch origin main
+#git fetch origin main
 git revert $COMMIT_TO_REVERT
 #git push origin main
