@@ -17,5 +17,5 @@ git config --global user.name "GitHub Revert Action"
 set -o xtrace
 
 git fetch origin main
-git revert $COMMIT_TO_REVERT
+git reset --hard head~1
 git push origin main
